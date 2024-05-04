@@ -25,9 +25,15 @@ header {
     margin-bottom: auto;
 }
 
+body {
+    background-color: #faa077;
+}
+
 h1 {
     text-align: center;
     animation: titulo 1s ease-in 1;
+    text-decoration: none;
+    font-size: 40px;
 }
 
 
@@ -205,7 +211,9 @@ table th {
     border-spacing: 10px;
     border: #FF4500 1px solid;
     margin-left: 50px;
-    column-gap: 30px;
+    column-gap: 10px;
+    color: white;
+    background-color: #1E2326;
 }
 
 .tabla {
@@ -213,6 +221,8 @@ table th {
     column-width: 300px;
     column-gap: 20px;
     border: none;
+    padding: 20px;
+    color: white;
 }
 
 #ingredientes {
@@ -223,21 +233,144 @@ table th {
 main {
     max-width: 1100px;
     margin: auto;
+    position: relative;
+    top: 75px;
+    padding-bottom: 150px;
+
+}
+
+/************************************************************************/
+/*********                      MAIN RECETAS                        ****/
+/**********************************************************************/
+
+.receta {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 50px 20px;
+}
+
+.receta .receta-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.receta h2 {
+    font-size: 36px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+
+.receta .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.receta .row .column {
+    width: 49%;
+    padding: 0 20px;
+}
+
+.receta .row .column h3 {
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
 }
 
 
+.receta .row .item {
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: var(--third-color);
+    position: relative;
+    /* border-radius: 5%;*/
+}
+
+.receta .row .item:hover {
+    background-color: #703539;
+}
+
+.receta .row .item h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.receta .row .item .subtitle {
+    color: var(--primary-color);
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+}
+
+.receta .row .item .date {
+    display: block;
+    color: #ff4450;
+    margin-bottom: 10px;
+}
+
+.receta .row .item p {
+    line-height: 24px;
+}
+
+.receta .row .left {
+    border-right: 2px solid var(--fourth-color);
+    margin-right: 20px;
+}
+
+.receta .row .right {
+    border-left: 2px solid var(--fourth-color);
+    margin-left: 20px;
+}
+
+.row1 {
+    background-image: url(/img/panq.jpg);
+    margin: 10px;
+
+}
+
+.receta .row1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.receta .row1 .column {
+    width: 49%;
+    padding: 0 20px;
+}
+
+.receta .row1 .column {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.receta .row1 .item {
+    width: 49%;
+    padding: 0 20px;
+}
+
+.receta .row1 .item {
+    width: 49%;
+    padding: 0 20px;
+}
+
+.receta .row1 .item .subtitle {
+    color: white;
+    font-size: 30px;
+    letter-spacing: 5px;
+    padding: 30px;
+}
 
 /*****************************/
-/*        fooooter    ***/
-/*************************/
+/*        fooooter        ***/
+/***************************/
 
 
 footer {
-    position: relative;
+    position: fixed;
     color: black;
     /* padding-top: 50px;*/
     text-align: center;
-    background-color: #FFA07A;
+    background-color: var(--fourth-color);
     left: 0px;
     bottom: 0px;
     width: 100%;
@@ -245,13 +378,11 @@ footer {
     overflow: hidden;
 }
 
-
-
 footer .social-media a {
-    color: var(--third-color);
+    color: var(--secondary-color);
     display: inline-block;
     text-decoration: none;
-    border: 1px solid var(--third-color);
+    border: 2px solid var(--secondary-color);
     border-radius: 100%;
     width: 42px;
     height: 42px;
@@ -264,7 +395,8 @@ footer .social-media a {
 footer .social-media a:hover {
     text-align: center;
     text-decoration: none;
-    background-color: var(--fourth-color);
+    background-color: var(--primary-color);
+    color: blue;
     margin-top: 10px;
     opacity: 70%;
 }
@@ -285,9 +417,6 @@ footer .social-media a:hover {
     }
 
 }
-
-
-
 
 label,
 input {
